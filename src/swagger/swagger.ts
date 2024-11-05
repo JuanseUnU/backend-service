@@ -1,24 +1,24 @@
 import swaggerJSDoc, { Options } from "swagger-jsdoc";
 
 const swaggerOptions: Options = {
-    definition: {
-        openapi: "3.0.0",
-        info: {
-            title: "Backend Service API",
-            version: "1.0.0",
-            description: "API para Catálogo de Productos"
-        },
-        servers: [{
-            url: "http://localhots:3000/"
-        }]
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Backend Service API",
+      version: "1.0.0",
+      description: "API para Catálogo de Productos"
     },
-    apis: [
-        "./src/routes/producRoutes.ts",
+    servers: [
+      {
+        url: "http://localhost:3000/"
+      }
     ]
+  },
+  apis: [
+    "./src/routes/productRoutes.ts",
+  ]
 };
 
-const swaggerSpec = swaggerJSDoc(swaggerJSDoc);
+const swaggerSpec = swaggerJSDoc(swaggerOptions);
 
 export default swaggerSpec;
-
-

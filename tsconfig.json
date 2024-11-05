@@ -1,12 +1,12 @@
 {
-    "buildOptions": {
-        "target": "ES6",
-        "module": "CommonJS",
-        "outDir": "./dist",
-        "rooDir": "./src",
-        "strict": true,
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadate": true
-    }
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
 }
