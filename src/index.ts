@@ -4,6 +4,7 @@ import { AppDataSource } from "./data-source";
 import productRoutes from "./routes/productRoutes";
 import swaggerUI from "swagger-ui-express";
 import swaggerSpec from "./swagger/swagger";
+import { AnyError } from "typeorm";
 
 const app: Application = express();
 const PORT = process.env.PORT ?? 3000;
@@ -29,4 +30,4 @@ AppDataSource.initialize()
       console.log(`Swagger en http://localhost:${PORT}/api-docs`);
     });
   })
-  .catch((error) => console.log(error));
+  .catch((error:AnyError) => console.log(error));
